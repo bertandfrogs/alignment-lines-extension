@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 210px;
+      padding: 14px;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #9999ff;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 7px;
+      border: 1px solid #383860;
+      border-radius: 5px;
+      background: #22223a;
+      color: #e0e0e0;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    button:hover { background: #2e2e52; border-color: #5555aa; }
+
+    button:last-of-type { margin-bottom: 0; }
+
+    #toggleBtn.active {
+      background: #2d2d6e;
+      border-color: #7777ff;
+      color: #ccccff;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #555577;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+
+    #toggleBtn.active .dot { background: #7bff7b; }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #55556a;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h3>Alignment Lines</h3>
+  <button id="toggleBtn">
+    <span class="dot"></span>
+    <span id="toggleLabel">Enable Overlay</span>
+  </button>
+  <button id="clearBtn">
+    <span style="width:8px;height:8px;flex-shrink:0"></span>
+    Clear All Lines
+  </button>
+  <p class="hint">Drag from the top ruler for horizontal lines, left ruler for vertical lines.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
